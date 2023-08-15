@@ -13,6 +13,7 @@
 		176E677B2A8780EC00622CE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176E67792A8780EC00622CE5 /* Main.storyboard */; };
 		176E677D2A8780EF00622CE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176E677C2A8780EF00622CE5 /* Assets.xcassets */; };
 		176E67802A8780EF00622CE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176E677E2A8780EF00622CE5 /* LaunchScreen.storyboard */; };
+		176E67A92A8BAD2F00622CE5 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E67A82A8BAD2F00622CE5 /* PlacesVC.swift */; };
 		CD62F5C978B77358F1D1129A /* Pods_FourSquareClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307C9B568A58DC11B5D94D48 /* Pods_FourSquareClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		176E677C2A8780EF00622CE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		176E677F2A8780EF00622CE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		176E67812A8780EF00622CE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		176E67A82A8BAD2F00622CE5 /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
 		307C9B568A58DC11B5D94D48 /* Pods_FourSquareClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquareClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC8E6B360969B7E2A63B81B /* Pods-FourSquareClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareClone.debug.xcconfig"; path = "Target Support Files/Pods-FourSquareClone/Pods-FourSquareClone.debug.xcconfig"; sourceTree = "<group>"; };
 		D9910998C1C7234788537FD5 /* Pods-FourSquareClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareClone.release.xcconfig"; path = "Target Support Files/Pods-FourSquareClone/Pods-FourSquareClone.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				176E67732A8780EC00622CE5 /* AppDelegate.swift */,
 				176E67752A8780EC00622CE5 /* SceneDelegate.swift */,
 				176E67772A8780EC00622CE5 /* ViewController.swift */,
+				176E67A82A8BAD2F00622CE5 /* PlacesVC.swift */,
 				176E67792A8780EC00622CE5 /* Main.storyboard */,
 				176E677C2A8780EF00622CE5 /* Assets.xcassets */,
 				176E677E2A8780EF00622CE5 /* LaunchScreen.storyboard */,
@@ -208,6 +211,7 @@
 			files = (
 				176E67782A8780EC00622CE5 /* ViewController.swift in Sources */,
 				176E67742A8780EC00622CE5 /* AppDelegate.swift in Sources */,
+				176E67A92A8BAD2F00622CE5 /* PlacesVC.swift in Sources */,
 				176E67762A8780EC00622CE5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
