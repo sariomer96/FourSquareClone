@@ -33,7 +33,7 @@ class ViewController: UIViewController {
                 }else{
                     
 //                    SEGUE
-                    print("welcome")
+                    self.performSegue(withIdentifier: "toPlacesVC", sender: nil)
                 }
             }
         }else{
