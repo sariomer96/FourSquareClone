@@ -13,6 +13,7 @@
 		176E677B2A8780EC00622CE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176E67792A8780EC00622CE5 /* Main.storyboard */; };
 		176E677D2A8780EF00622CE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176E677C2A8780EF00622CE5 /* Assets.xcassets */; };
 		176E67802A8780EF00622CE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176E677E2A8780EF00622CE5 /* LaunchScreen.storyboard */; };
+		CD62F5C978B77358F1D1129A /* Pods_FourSquareClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307C9B568A58DC11B5D94D48 /* Pods_FourSquareClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		176E677C2A8780EF00622CE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		176E677F2A8780EF00622CE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		176E67812A8780EF00622CE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		307C9B568A58DC11B5D94D48 /* Pods_FourSquareClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquareClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC8E6B360969B7E2A63B81B /* Pods-FourSquareClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareClone.debug.xcconfig"; path = "Target Support Files/Pods-FourSquareClone/Pods-FourSquareClone.debug.xcconfig"; sourceTree = "<group>"; };
+		D9910998C1C7234788537FD5 /* Pods-FourSquareClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareClone.release.xcconfig"; path = "Target Support Files/Pods-FourSquareClone/Pods-FourSquareClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD62F5C978B77358F1D1129A /* Pods_FourSquareClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				176E67722A8780EC00622CE5 /* FourSquareClone */,
 				176E67712A8780EC00622CE5 /* Products */,
+				F68E2A7E948F0A2720C22426 /* Pods */,
+				AD492F8E40CDE59A64645CD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = FourSquareClone;
 			sourceTree = "<group>";
 		};
+		AD492F8E40CDE59A64645CD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				307C9B568A58DC11B5D94D48 /* Pods_FourSquareClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F68E2A7E948F0A2720C22426 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBC8E6B360969B7E2A63B81B /* Pods-FourSquareClone.debug.xcconfig */,
+				D9910998C1C7234788537FD5 /* Pods-FourSquareClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 176E67842A8780EF00622CE5 /* Build configuration list for PBXNativeTarget "FourSquareClone" */;
 			buildPhases = (
+				B6FB809F8A9A7436C003629E /* [CP] Check Pods Manifest.lock */,
 				176E676C2A8780EC00622CE5 /* Sources */,
 				176E676D2A8780EC00622CE5 /* Frameworks */,
 				176E676E2A8780EC00622CE5 /* Resources */,
+				A448304BFE5A9F15B33A01CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A448304BFE5A9F15B33A01CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FourSquareClone/Pods-FourSquareClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FourSquareClone/Pods-FourSquareClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FourSquareClone/Pods-FourSquareClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6FB809F8A9A7436C003629E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FourSquareClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		176E676C2A8780EC00622CE5 /* Sources */ = {
@@ -282,6 +350,7 @@
 		};
 		176E67852A8780EF00622CE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBC8E6B360969B7E2A63B81B /* Pods-FourSquareClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +379,7 @@
 		};
 		176E67862A8780EF00622CE5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9910998C1C7234788537FD5 /* Pods-FourSquareClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
