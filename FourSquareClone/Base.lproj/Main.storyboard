@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FourSquareClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignUpVC" customModule="FourSquareClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,6 +57,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fsM-Oh-pvu"/>
                     <connections>
                         <outlet property="passwordText" destination="L7Z-do-2zf" id="Can-K3-a4Y"/>
                         <outlet property="usernameText" destination="OKs-u0-80l" id="k3k-jJ-wmS"/>
@@ -83,13 +84,20 @@
                         <viewLayoutGuide key="safeArea" id="OkN-jr-yF6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AoD-DU-ZRR" secondAttribute="trailing" id="25C-qv-oT8"/>
                             <constraint firstAttribute="trailing" secondItem="AoD-DU-ZRR" secondAttribute="trailing" id="GnR-EK-opI"/>
+                            <constraint firstItem="AoD-DU-ZRR" firstAttribute="top" secondItem="OkN-jr-yF6" secondAttribute="top" id="KXr-cy-YT3"/>
                             <constraint firstItem="OkN-jr-yF6" firstAttribute="bottom" secondItem="AoD-DU-ZRR" secondAttribute="bottom" id="QjZ-uq-bed"/>
+                            <constraint firstItem="AoD-DU-ZRR" firstAttribute="leading" secondItem="OkN-jr-yF6" secondAttribute="leading" id="fHd-LY-GPK"/>
                             <constraint firstItem="AoD-DU-ZRR" firstAttribute="top" secondItem="OkN-jr-yF6" secondAttribute="top" id="o1c-Dz-C3R"/>
                             <constraint firstItem="AoD-DU-ZRR" firstAttribute="leading" secondItem="OkN-jr-yF6" secondAttribute="leading" id="wOI-0b-Bpp"/>
+                            <constraint firstItem="OkN-jr-yF6" firstAttribute="bottom" secondItem="AoD-DU-ZRR" secondAttribute="bottom" id="zVk-hB-RgT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M3t-3l-9b4"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignUpVC" modalPresentationStyle="fullScreen" id="eGB-9Q-DrB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbS-Q2-1Lh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,7 +106,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xPp-5D-djH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I6Z-pd-qBN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="I6Z-pd-qBN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="wGk-1N-wQW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gbr-Uo-h0q">
