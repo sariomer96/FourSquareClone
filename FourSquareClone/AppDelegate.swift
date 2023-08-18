@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ParseMutableClientConfiguration.clientKey = "NLgmo9anag3u6KjzcCcfpuxVo8gGDvyY9ZZuXPdE"
             ParseMutableClientConfiguration.server = "https://parseapi.back4app.com/"
             
+            
         }
         
         Parse.initialize(with: configuration)
