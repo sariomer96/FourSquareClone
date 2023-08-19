@@ -97,9 +97,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="M3t-3l-9b4"/>
                     <connections>
+                        <outlet property="tableView" destination="AoD-DU-ZRR" id="8uF-QB-MDH"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignUpVC" modalPresentationStyle="fullScreen" id="eGB-9Q-DrB"/>
                         <segue destination="6ey-jA-VTe" kind="show" identifier="toAddPlaceVC" id="dpF-rF-jzJ"/>
-                        <segue destination="5XF-Yd-Cqd" kind="show" identifier="toDetailsVC " id="xLU-lX-xaI"/>
+                        <segue destination="5XF-Yd-Cqd" kind="show" identifier="toDetailsVC" id="xLU-lX-xaI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbS-Q2-1Lh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
