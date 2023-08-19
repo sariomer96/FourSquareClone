@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Parse
 import MapKit
 
 class MapVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
 
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +29,29 @@ class MapVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(chooseLocation(gestureRecognizer:)))
+        recognizer.minimumPressDuration = 3
+        mapView.addGestureRecognizer(recognizer)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func chooseLocation(gestureRecognizer: UIGestureRecognizer){
+        
+        if gestureRecognizer.state == UIGestureRecognizer.State.began{
+            let touches = gestureRecognizer.location(in: self.mapView)
+            let coordinate = self.mapView.convert(touches, toCoordinateFrom: self.mapView)
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            annotation.title = PlaceModel.sharedInstance.placeName
+            annotation.subtitle = PlaceModel.sharedInstance.placeType
+            
+            self.mapView.addAnnotation(annotation)
+            
+   
+            
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -36,6 +60,10 @@ class MapVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
         
+        let placeModel = PlaceModel.sharedInstance
+        
+        placeModel.placeLatitude = String( location.latitude)
+        placeModel.placeLongitude = String( location.longitude)
         mapView.setRegion(region, animated: true)
     }
     
@@ -46,6 +74,35 @@ class MapVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     @objc func saveButtonClicked()
     {
         //PARSE
+        let placeModel = PlaceModel.sharedInstance
+        let object = PFObject(className: "Places")
+        
+        object["name"] = placeModel.placeName
+        object["type"] = placeModel.placeType
+        object["atmosphere"] = placeModel.placeAtmosphere
+        object["latitude"] = placeModel.placeLatitude
+        object["longitude"] = placeModel.placeLongitude
+        
+        if let imageData = placeModel.placeImage.jpegData(compressionQuality: 0.5){
+            object["image"] = PFFileObject(name: "image.jpg", data: imageData)
+            
+        }
+        
+        object.saveInBackground{
+            (success,error) in
+            if error != nil {
+                let alert = UIAlertController(title: "error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                
+                let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(okButton)
+                
+                self.present(alert, animated: true)
+                
+            }else{
+                self.performSegue(withIdentifier: "fromMapVCtoPlacesVC", sender: nil)
+            }
+        }
+        
     }
     
 
